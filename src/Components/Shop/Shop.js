@@ -18,7 +18,10 @@ const Shop = ({ search, setSearch }) => {
     return (
         <div className='my-5 container mx-auto sm:mx-2'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4'>
-                {meals?.map((meal) => (<Meal key={meal.idMeal} meal={meal}></Meal>))}
+                {meals?.map((meal) => (<Meal
+                    key={meal.idMeal}
+                    meal={meal}
+                    setMeals={setMeals}></Meal>))}
             </div>
         </div>
     );

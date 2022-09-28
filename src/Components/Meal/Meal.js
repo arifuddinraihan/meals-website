@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from '../Modal/Modal';
 
-const Meal = ({meal}) => {
-    const { idMeal, strMeal:name, strInstructions:details, strMealThumb:img } = meal; 
+const Meal = ({ meal, setMeals }) => {
+    const [modalMeal, setModalMeal] = useState({})
+
+    const { idMeal, strMeal: name, strInstructions: details, strMealThumb: img } = meal;
     return (
         <div className='ml-2 mr-2'>
             <div className='h-4/5'>
@@ -9,11 +12,16 @@ const Meal = ({meal}) => {
                     <figure><img className='h-full' src={img} alt="Movie" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-sm md:text-lg">{name}</h2>
-                        <p className='text-xs md:text-sm'>{details?details.slice(0,100) : "Details not available"}</p>
+                        <p className='text-xs md:text-sm'>{details ? details.slice(0, 100) : "Details not available"}</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Watch</button>
+                            <label onClick={() => setModalMeal(meal)}
+                                htmlFor="my-modal-3" className="btn btn-primary">Watch</label>
                         </div>
                     </div>
+                    {modalMeal &&
+                        (<Modal modalMeal={modalMeal} setModalMeal={setModalMeal}>
+
+                        </Modal>)}
                 </div>
             </div>
         </div>

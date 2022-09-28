@@ -1,4 +1,5 @@
 import React from 'react';
+import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBowlFood } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,7 +15,7 @@ const Navbar = ({ search, setSearch }) => {
                         <strong>Select Your Meals</strong></a>
                 </div>
                 <div className="flex-none gap-2">
-                    
+
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
@@ -37,7 +38,7 @@ const Navbar = ({ search, setSearch }) => {
             <div className='my-5 text-center'>
                 <div className="form-control block">
                     <input onChange={(e) => setSearch(e.target.value)}
-                    type="text" placeholder="Search" className="input input-bordered" />
+                        type="text" placeholder="Search" className="input input-bordered" />
                 </div>
             </div>
         </div>
