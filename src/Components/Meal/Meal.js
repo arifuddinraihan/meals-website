@@ -4,7 +4,7 @@ import Modal from '../Modal/Modal';
 const Meal = ({ meal, setMeals }) => {
     const [modalMeal, setModalMeal] = useState({})
 
-    const { idMeal, strMeal: name, strInstructions: details, strMealThumb: img } = meal;
+    const { strMeal: name, strInstructions: details, strMealThumb: img } = meal;
     return (
         <div className='ml-2 mr-2'>
             <div className='h-4/5'>

@@ -2,7 +2,7 @@ import React from 'react';
 import './Modal.css'
 
 const Modal = ({ modalMeal, setModalMeal }) => {
-    const { idMeal, strMeal: name, strInstructions: details, strMealThumb: img } = modalMeal;
+    const { strMeal: name, strInstructions: details, strMealThumb: img } = modalMeal;
     return (
         <div>
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />

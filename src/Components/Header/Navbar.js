@@ -8,7 +8,7 @@ const Navbar = ({ search, setSearch }) => {
     // console.log(search);
     return (
         <div className='sticky top-0 z-10'>
-            <div className="navbar bg-info shadow-lg px-auto md:px-10">
+            <div className="navbar bg-neutral shadow-lg px-auto md:px-10">
                 <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-white text-sm md:text-xl gap-2">
                         <FontAwesomeIcon icon={faBowlFood} />
