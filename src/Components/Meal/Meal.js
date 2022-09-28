@@ -1,16 +1,17 @@
 import React from 'react';
 
-const Meal = () => {
+const Meal = ({meal}) => {
+    const { idMeal, strMeal:name, strInstructions:details, strMealThumb:img } = meal; 
     return (
-        <div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4'>
-                <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src="" alt="Shoes" /></figure>
+        <div className='ml-2 mr-2'>
+            <div className='h-4/5'>
+                <div className="card card-side bg-base-100 shadow-xl">
+                    <figure><img className='h-full' src={img} alt="Movie" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title"></h2>
-                        <p></p>
+                        <h2 className="card-title text-sm md:text-lg">{name}</h2>
+                        <p className='text-xs md:text-sm'>{details?details.slice(0,100) : "Details not available"}</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            <button className="btn btn-primary">Watch</button>
                         </div>
                     </div>
                 </div>
