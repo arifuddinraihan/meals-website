@@ -3,7 +3,7 @@ import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBowlFood } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = ({ search, setSearch }) => {
+const Navbar = ({ setSearch }) => {
 
     // console.log(search);
     return (
@@ -12,7 +12,7 @@ const Navbar = ({ search, setSearch }) => {
                 <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-white text-sm md:text-xl gap-2">
                         <FontAwesomeIcon icon={faBowlFood} />
-                        <strong>Select Your Meals</strong></a>
+                        <strong>Arif Food Blogger</strong></a>
                 </div>
                 <div className="flex-none gap-2">
 
